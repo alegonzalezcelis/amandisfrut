@@ -24,7 +24,7 @@ img, video, svg { height: auto; max-width: 100%; }
 /* Custom */
 
 #header-section {
-    background: url(../images/main-hero.jpeg);
+    background: url(../images/header.jpeg);
     backdrop-filter: blur(10px);
     background-repeat: none;
     background-size: cover;
