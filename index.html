@@ -35,158 +35,301 @@
     crossorigin="anonymous"
   ></script>
   <body class="bg-slate-100">
-    <!-- Header -->
-    <header
-      id="header-section"
-      class="w-100 text-gray-300 flex flex-col items-center justify-center"
-    >
-      <!-- Aquí va el nav -->
-      <div class="container text-center">
-        <h1 class="text-4xl md:text-6xl xl:text-7xl mb-5">
-          La Mejor Calidad de Cítricos con
-          <span class="font-bold">AmandisFrut</span>
-        </h1>
-        <h2 class="text-2xl md:text-4xl lg:text-4xl font-light">
-          Experto en Cítricos
-        </h2>
-      </div>
-    </header>
-    <!-- Header -->
-
-    <!-- Main -->
-    <main
-      class="container mx-auto py-10 flex flex-col items-center justify-center gap-4"
-    >
-      <div class="flex flex-col justify-center">
-        <div
-          class="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl p-3 max-w-xs md:max-w-3xl mx-auto"
+    <div class="container-fluid mx-auto">
+      <!-- Contenedor de la Grilla -->
+      <div class="grid grid-cols-12 gap-4">
+        <!-- Header -->
+        <header
+          id="header-section"
+          class="col-span-12 text-white"
         >
-          <div class="w-full md:w-2/3 flex flex-col space-y-5 p-3">
-            <h3 class="md:text-3xl text-xl text-neutral-900 font-medium">
-              Los mejores cítricos de la Región
-            </h3>
-            <p class="md:text-lg text-neutral-600">
-              En AmandisFrut nos dedicamos a la venta de cítricos al por mayor,
-              cosechados y procesados de manera natural.
-            </p>
-            <ul class="text-neutral-600">
-              <li class="text-xl my-2">
-                <i class="fa-regular fa-circle-check text-green-600 mr-4"></i>
-                Frescura garantizada
-              </li>
-              <li class="text-xl my-2">
-                <i class="fa-regular fa-circle-check text-green-600 mr-4"></i>
-                Calidad natural
-              </li>
-              <li class="text-xl my-2">
-                <i class="fa-regular fa-circle-check text-green-600 mr-4"></i>
-                Gran variedad
-              </li>
-            </ul>
-            <button
-              class="bg-orange-500 rounded-md py-2 text-white w-full md:w-32"
+          <!-- Contenedor del Nav -->
+          <div
+            class="grid grid-cols-12 h-16 md:h-32 top-0 bg-slate-100 my-auto items-center"
+          >
+            <!-- Contenedor Logo -->
+            <div class="col-end-4">
+              <picture>
+                <source
+                  srcset="/assets/images/logo-amandisfrut.webp 320w"
+                  sizes="(max-width: 320px)"
+                  type="image/webp"
+                  class="rounded-lg"
+                />
+                <source
+                  srcset="/assets/images/logo-amandisfrut.webp 800w"
+                  sizes="(max-width: 800px)"
+                  type="image/webp"
+                  class="rounded-lg"
+                />
+                <source
+                  srcset="/assets/images/logo-amandisfrut.webp 1280w"
+                  sizes="(max-width: 1280px)"
+                  type="image/webp"
+                  class="rounded-lg"
+                />
+                <img
+                  id="logo-amandisfrut"
+                  src="assets/images/logo-amandisfrut.png"
+                  title="Arbol de naranjas"
+                  alt="Imagen de un arbol de naranjas"
+                  class="rounded-lg"
+                />
+              </picture>
+            </div>
+            <!-- Menú Hamburguesa -->
+            <div class="md:hidden flex items-center">
+              <button
+                id="menu-toggle"
+                class="text-black focus:outline-none"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <!-- Menú de Navegación -->
+            <nav
+              id="menu"
+              class="hidden md:flex col-end-11 space-x-4 text-red-600 md:justify-end"
             >
-              Contacto
-            </button>
+              <ul
+                class="flex flex-col md:flex-row md:space-x-4 md:space-y-0 text-lg"
+              >
+                <li>
+                  <a
+                    href="#inicio"
+                    class="hover:text-orange-500"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#servicios"
+                    class="hover:text-orange-500"
+                    >Servicios</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#productos"
+                    class="hover:text-orange-500"
+                    >Productos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#nosotros"
+                    class="hover:text-orange-500"
+                    >Nosotros</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contacto"
+                    class="hover:text-orange-500"
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="w-full md:w-1/3 grid place-items-center">
-            <!-- <img
-              src="assets/images/main.jpg"
-              class="rounded-xl"
-              alt=""
-              srcset=""
-            /> -->
 
-            <!-- Pedirle una foto al abeja -->
-            <picture>
-              <source
-                srcset="/assets/images/main.webp 320w"
-                sizes="(max-width: 320px)"
-                type="image/webp"
-                class="rounded-lg"
-              />
-              <source
-                srcset="/assets/images/main.webp 800w"
-                sizes="(max-width: 800px)"
-                type="image/webp"
-                class="rounded-lg"
-              />
-              <source
-                srcset="/assets/images/main.webp 1280w"
-                sizes="(max-width: 1280px)"
-                type="image/webp"
-                class="rounded-lg"
-              />
-              <img
-                src="assets/images/main.jpeg"
-                title="Arbol de naranjas"
-                alt="Imagen de un arbol de naranjas"
-                class="rounded-lg"
-              />
-            </picture>
+          <div class="col-span-12">
+            <!-- Logo y Título -->
+            <div
+              class="col-span-12 md:col-span-8 md:col-start-3 text-center md:text-left"
+            >
+              <h1 class="text-4xl md:text-6xl xl:text-7xl mb-1">
+                La Mejor Calidad de Cítricos con
+                <span class="font-bold text-orange-500">AmandisFrut</span>
+              </h1>
+              <h2 class="text-2xl md:text-4xl lg:text-4xl font-light">
+                Expertos en Cítricos
+              </h2>
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
-    <!-- Main -->
+        </header>
+        <!-- Fin Header -->
 
-    <!-- Servicios -->
-    <!-- Si no logro cambiarle el w, agregar un color de fondo en el body -->
-    <section
-      id="servicios"
-      class="container mx-auto py-10 px-5 flex flex-col items-center justify-center gap-4"
-    >
-      <h2 class="text-4xl lg:text-5xl text-neutral-900">Nuestros servicios</h2>
-      <!-- También puede decir Nuestro sello -->
-      <p class="md:text-lg text-justify w-full md:w-2/3 text-neutral-600">
-        En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y de
-        la más alta calidad.
-        <br />
-        <br />
-        Sabemos que la frescura y el sabor son esenciales para el éxito de tu
-        negocio, por eso nos aseguramos de que nuestros productos lleguen a tu
-        cocina en perfectas condiciones.
-      </p>
-      <div class="flex flex-wrap justify-center gap-10 m-0">
-        <!-- Servicio 1 -->
-        <div
-          class="flex flex-col items-center justify-center bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
-        >
-          <!-- icono -->
-          <i class="fa-solid fa-seedling text-5xl text-green-600"></i>
-          <h3 class="text-2xl">Proceso natural</h3>
-          <p class="text-neutral-600">
-            Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-            justo sed vero dolor duo.
-          </p>
-        </div>
-        <!-- Servicio 2 -->
-        <div
-          class="flex flex-col items-center justify-center bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
-        >
-          <!-- icono -->
-          <i class="fa-solid fa-wallet text-5xl text-green-600"></i>
-          <h3 class="text-2xl">El mejor precio</h3>
-          <p class="text-neutral-600">
-            Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-            justo sed vero dolor duo.
-          </p>
-        </div>
-        <!-- Servicio 3 -->
-        <div
-          class="flex flex-col items-center justify-center bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
-        >
-          <!-- icono -->
-          <i class="fa-solid fa-truck text-5xl text-green-600"></i>
-          <h3 class="text-2xl">Entrega rápida y confiable</h3>
-          <p class="text-neutral-600">
-            Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-            justo sed vero dolor duo.
-          </p>
-        </div>
-      </div>
-    </section>
+        <!-- Main -->
+        <main class="container mx-auto py-10 gap-4">
+          <div class="justify-center">
+            <div
+              class="relative md:space-x-5 space-y-3 md:space-y-0 rounded-xl p-3 max-w-xs md:max-w-3xl mx-auto"
+            >
+              <div class="w-full md:w-2/3 space-y-5 p-3">
+                <h3 class="md:text-3xl text-xl text-neutral-900 font-medium">
+                  Los mejores cítricos de la Región
+                </h3>
+                <p class="md:text-lg text-neutral-600">
+                  En AmandisFrut nos dedicamos a la venta de cítricos al por
+                  mayor, cosechados y procesados de manera natural.
+                </p>
+                <ul class="text-neutral-600">
+                  <li class="text-xl my-2">
+                    <i
+                      class="fa-regular fa-circle-check text-green-600 mr-4"
+                    ></i>
+                    Frescura garantizada
+                  </li>
+                  <li class="text-xl my-2">
+                    <i
+                      class="fa-regular fa-circle-check text-green-600 mr-4"
+                    ></i>
+                    Calidad natural
+                  </li>
+                  <li class="text-xl my-2">
+                    <i
+                      class="fa-regular fa-circle-check text-green-600 mr-4"
+                    ></i>
+                    Gran variedad
+                  </li>
+                </ul>
+                <button
+                  class="bg-orange-500 rounded-md py-2 text-white w-full md:w-32"
+                >
+                  Contacto
+                </button>
+              </div>
+              <div class="w-full md:w-1/3 grid place-items-center">
+                <!-- <img
+                src="assets/images/main.jpg"
+                class="rounded-xl"
+                alt=""
+                srcset=""
+              /> -->
 
+                <!-- Pedirle una foto al abeja -->
+                <picture>
+                  <source
+                    srcset="/assets/images/main.webp 320w"
+                    sizes="(max-width: 320px)"
+                    type="image/webp"
+                    class="rounded-lg"
+                  />
+                  <source
+                    srcset="/assets/images/main.webp 800w"
+                    sizes="(max-width: 800px)"
+                    type="image/webp"
+                    class="rounded-lg"
+                  />
+                  <source
+                    srcset="/assets/images/main.webp 1280w"
+                    sizes="(max-width: 1280px)"
+                    type="image/webp"
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="assets/images/main.jpeg"
+                    title="Arbol de naranjas"
+                    alt="Imagen de un arbol de naranjas"
+                    class="rounded-lg"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Main -->
+
+        <!-- Servicios -->
+        <!-- Si no logro cambiarle el w, agregar un color de fondo en el body -->
+        <section
+          id="servicios"
+          class="container mx-auto py-10 px-5 gap-4"
+        >
+          <h2 class="text-4xl lg:text-5xl text-neutral-900">
+            Nuestros servicios
+          </h2>
+          <!-- También puede decir Nuestro sello -->
+          <p class="md:text-lg text-justify w-full md:w-2/3 text-neutral-600">
+            En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y
+            de la más alta calidad.
+            <br />
+            <br />
+            Sabemos que la frescura y el sabor son esenciales para el éxito de
+            tu negocio, por eso nos aseguramos de que nuestros productos lleguen
+            a tu cocina en perfectas condiciones.
+          </p>
+          <div class="gap-10 m-0">
+            <!-- Servicio 1 -->
+            <div
+              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+            >
+              <!-- icono -->
+              <i class="fa-solid fa-seedling text-5xl text-orange-500"></i>
+              <h3 class="text-2xl">Proceso natural</h3>
+              <p class="text-neutral-600">
+                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
+                diam justo sed vero dolor duo.
+              </p>
+            </div>
+            <!-- Servicio 2 -->
+            <div
+              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+            >
+              <!-- icono -->
+              <i class="fa-solid fa-wallet text-5xl text-orange-500"></i>
+              <h3 class="text-2xl">El mejor precio</h3>
+              <p class="text-neutral-600">
+                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
+                diam justo sed vero dolor duo.
+              </p>
+            </div>
+            <!-- Servicio 3 -->
+            <div
+              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+            >
+              <!-- icono -->
+              <i class="fa-solid fa-truck text-5xl text-orange-500"></i>
+              <h3 class="text-2xl">Entrega rápida y confiable</h3>
+              <p class="text-neutral-600">
+                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
+                diam justo sed vero dolor duo.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Productos -->
+        <section
+          id="productos"
+          class="container mx-auto py-10 px-5 gap-4"
+        >
+          <h2 class="text-4xl lg:text-5xl text-neutral-900">Productos</h2>
+        </section>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.5/dist/alpine.js"></script>
+    <script>
+      // Script para toggle del menú hamburguesa
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Script para scroll suave
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>

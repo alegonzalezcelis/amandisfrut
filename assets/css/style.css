@@ -39,6 +39,10 @@ img, video, svg { height: auto; max-width: 100%; }
     }
 }
 
+#logo-amandisfrut {
+    width: 200px;
+}
+
 /* Responsive */
 
 
