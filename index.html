@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html
+  class="scroll-smooth"
+  lang="es"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -36,128 +39,111 @@
   ></script>
   <body class="bg-slate-100">
     <div class="container-fluid mx-auto">
+      <!-- Disminuir el height del nav al momento de hacer scroll hacia abajo, y luego volverlo a la normalidad al hacer scroll hacia a arriba -->
+
+      <!-- Agregar información arriba para utilizar espacio (Correo - Teléfono - Redes sociales) -->
+      <nav
+        class="flex flex-wrap items-center justify-between w-full py-4 px-10 text-lg text-gray-700 bg-white sticky top-0 z-10"
+      >
+        <!-- Contenedor del logo -->
+        <div class="">
+          <a href="#">
+            <img
+              class="w-20 md:w-28"
+              src="assets/images/logo-amandisfrut.png"
+              alt=""
+              srcset=""
+            />
+          </a>
+        </div>
+
+        <!-- Menú Hamburguesa -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="menu-button"
+          class="h-6 w-6 cursor-pointer md:hidden block"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <!-- Menú items -->
+        <div
+          class="hidden w-full md:flex md:items-center md:w-auto"
+          id="menu"
+        >
+          <ul
+            class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+          >
+            <li>
+              <a
+                class="md:p-4 py-2 block hover:text-purple-400"
+                href="#"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block hover:text-purple-400"
+                href="#"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block hover:text-purple-400"
+                href="#"
+                >Productos</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block hover:text-purple-400"
+                href="#"
+                >Nosotros</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
+                href="#"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
       <!-- Contenedor de la Grilla -->
       <div class="grid grid-cols-12 gap-4">
         <!-- Header -->
         <header
           id="header-section"
-          class="col-span-12 text-white"
+          class="col-span-12 text-white py-16 md:py-24"
         >
-          <!-- Contenedor del Nav -->
-          <div
-            class="grid grid-cols-12 h-16 md:h-32 top-0 bg-slate-100 my-auto items-center"
-          >
-            <!-- Contenedor Logo -->
-            <div class="col-end-4">
-              <picture>
-                <source
-                  srcset="/assets/images/logo-amandisfrut.webp 320w"
-                  sizes="(max-width: 320px)"
-                  type="image/webp"
-                  class="rounded-lg"
-                />
-                <source
-                  srcset="/assets/images/logo-amandisfrut.webp 800w"
-                  sizes="(max-width: 800px)"
-                  type="image/webp"
-                  class="rounded-lg"
-                />
-                <source
-                  srcset="/assets/images/logo-amandisfrut.webp 1280w"
-                  sizes="(max-width: 1280px)"
-                  type="image/webp"
-                  class="rounded-lg"
-                />
-                <img
-                  id="logo-amandisfrut"
-                  src="assets/images/logo-amandisfrut.png"
-                  title="Arbol de naranjas"
-                  alt="Imagen de un arbol de naranjas"
-                  class="rounded-lg"
-                />
-              </picture>
-            </div>
-            <!-- Menú Hamburguesa -->
-            <div class="md:hidden flex items-center">
-              <button
-                id="menu-toggle"
-                class="text-black focus:outline-none"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <!-- Menú de Navegación -->
-            <nav
-              id="menu"
-              class="hidden md:flex col-end-11 space-x-4 text-red-600 md:justify-end"
+          <!-- Logo y Título -->
+          <div class="grid grid-cols-12">
+            <h1
+              class="col-start-3 col-span-8 text-center text-3xl md:text-5xl xl:text-6xl mb-8"
             >
-              <ul
-                class="flex flex-col md:flex-row md:space-x-4 md:space-y-0 text-lg"
+              La mejor calidad de Cítricos con
+              <br />
+              <span
+                class="text-center font-extrabold text-4xl md:text-5xl xl:text-7xl"
+                >AmandisFrut</span
               >
-                <li>
-                  <a
-                    href="#inicio"
-                    class="hover:text-orange-500"
-                    >Inicio</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#servicios"
-                    class="hover:text-orange-500"
-                    >Servicios</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#productos"
-                    class="hover:text-orange-500"
-                    >Productos</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#nosotros"
-                    class="hover:text-orange-500"
-                    >Nosotros</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#contacto"
-                    class="hover:text-orange-500"
-                    >Contacto</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-span-12">
-            <!-- Logo y Título -->
-            <div
-              class="col-span-12 md:col-span-8 md:col-start-3 text-center md:text-left"
+            </h1>
+            <h2
+              class="col-start-3 col-span-8 text-2xl md:text-4xl lg:text-4xl font-bold text-center"
             >
-              <h1 class="text-4xl md:text-6xl xl:text-7xl mb-1">
-                La Mejor Calidad de Cítricos con
-                <span class="font-bold text-orange-500">AmandisFrut</span>
-              </h1>
-              <h2 class="text-2xl md:text-4xl lg:text-4xl font-light">
-                Expertos en Cítricos
-              </h2>
-            </div>
+              Expertos en Cítricos
+            </h2>
           </div>
         </header>
         <!-- Fin Header -->
@@ -312,24 +298,24 @@
     </div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.5/dist/alpine.js"></script>
     <script>
-      // Script para toggle del menú hamburguesa
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          var menu = document.getElementById("menu");
-          menu.classList.toggle("hidden");
-        });
+      // Menú Hamburguesa
+      const button = document.querySelector("#menu-button");
+      const menu = document.querySelector("#menu");
+
+      button.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
       // Script para scroll suave
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
+      // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      //   anchor.addEventListener("click", function (e) {
+      //     e.preventDefault();
 
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
+      //     document.querySelector(this.getAttribute("href")).scrollIntoView({
+      //       behavior: "smooth",
+      //     });
+      //   });
+      // });
     </script>
   </body>
 </html>

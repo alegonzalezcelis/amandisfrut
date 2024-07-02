@@ -25,11 +25,9 @@ img, video, svg { height: auto; max-width: 100%; }
 
 #header-section {
     background: url(../images/header.jpeg);
-    backdrop-filter: blur(10px);
     background-repeat: none;
     background-size: cover;
-    height: 500px;
-
+    filter: brightness(.8);
     h1 {
         text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
     }
@@ -71,7 +69,7 @@ img, video, svg { height: auto; max-width: 100%; }
 /*Default*/
 @media (max-width: 575.98px)and (orientation:portrait) {
     #header-section {
-        height: 400px;
+        height: auto;
     }
  }
 /*landscape*/
