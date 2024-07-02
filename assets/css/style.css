@@ -24,10 +24,10 @@ img, video, svg { height: auto; max-width: 100%; }
 /* Custom */
 
 #header-section {
+    background: url(../images/blur-header.jpg);
     background: url(../images/header.jpeg);
     background-repeat: none;
     background-size: cover;
-    filter: brightness(.8);
     h1 {
         text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
     }
